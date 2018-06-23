@@ -1,2 +1,5 @@
-<h1>Doctor#show</h1>
-<p>Find me in app/views/doctor/show.html.erb</p>
+<h2><%= @user.username %> </h2> has commented on the following posts:
+ 
+<% @user.posts.each do |post| %>
+  <%= link_to post.title, post_path(post) %>
+<% end %>
