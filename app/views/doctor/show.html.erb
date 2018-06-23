@@ -1,5 +1,6 @@
-<h2><%= @user.username %> </h2> has commented on the following posts:
- 
-<% @user.posts.each do |post| %>
-  <%= link_to post.title, post_path(post) %>
+<h2><%= @doctor.name %> </h2>
+<h4><%= @doctor.department %> </h4>
+
+<% @doctor.appointments.each do |appointment| %>
+  <%= link_to appointment.patient.name, patient_path(patient) %>
 <% end %>
